@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="StudentClearanceApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StudentClearanceApp"
+    xmlns:model ="clr-namespace:StudentClearanceApp.Models"
+    xmlns:appshellvmodel ="clr-namespace:StudentClearanceApp.ViewModels"
+    xmlns:startupPages="clr-namespace:StudentClearanceApp.Views.Startups"
+    xmlns:dashboardPages="clr-namespace:StudentClearanceApp.Views.Dashboard"
+    xmlns:profilePages ="clr-namespace:StudentClearanceApp.Views.Dashboard"
+    FlyoutBehavior="Flyout">
+
+
+    <ShellContent FlyoutItemIsVisible="False" Shell.FlyoutBehavior="Disabled"
+        ContentTemplate="{DataTemplate startupPages:LoadingPage}"
+        Route="LoadingPage" />
+    
+
+    <ShellContent
+        Title="Home" FlyoutItemIsVisible="False" Shell.FlyoutBehavior="Disabled"
+        ContentTemplate="{DataTemplate startupPages:LoginPage}"
+        Route="LoginPage" />
+
+   
+    
+    <FlyoutItem Title="Dashboard"  FlyoutDisplayOptions="AsSingleItem" Shell.FlyoutBehavior="Flyout">
+
+        <ShellContent
+        Title="Dashboard" Icon="{x:Static model:Icon.Dashboard}"
+        ContentTemplate="{DataTemplate dashboardPages:DashboardPage}"
+        Route="DashboardPage" />
+    </FlyoutItem>
+
+    <FlyoutItem  Title="Student Profile"  >
+
+        <ShellContent
+        Title="Bio Data" Icon="{x:Static model:Icon.Dashboard}"
+        ContentTemplate="{DataTemplate profilePages:BioDataPage}"
+        Route="BioDataPage"
+        />
+
+        <ShellContent
+        Title="Login Detail"  Icon="{x:Static model:Icon.Profile}"
+        ContentTemplate="{DataTemplate profilePages:LoginDetailsPage}"
+        Route="LoginDetailsPage"
+       />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Clearance"  FlyoutDisplayOptions="AsSingleItem" Shell.FlyoutBehavior="Flyout">
+
+        <ShellContent
+        Title="Finance Page" Icon="{x:Static model:Icon.Dashboard}"
+        ContentTemplate="{DataTemplate dashboardPages:FinancePage}"
+        Route="FinancePage"
+        />
+
+
+        <ShellContent
+        Title="Library Page "  Icon="{x:Static model:Icon.Clearance}"
+        ContentTemplate="{DataTemplate dashboardPages:LibraryPage}"
+        Route="LibraryPage"
+         />
+
+        <ShellContent
+        Title="Student Affairs"  Icon="{x:Static model:Icon.ClearanceStatus}"
+        ContentTemplate="{DataTemplate dashboardPages:StudentAffairsPage}"
+        Route="StudentAffairsPage"
+            />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Clearance Status"  FlyoutDisplayOptions="AsSingleItem" Shell.FlyoutBehavior="Flyout">
+
+        <ShellContent
+        Title="Dashboard" Icon="{x:Static model:Icon.Dashboard}"
+        ContentTemplate="{DataTemplate dashboardPages:ClearanceStatusPage}"
+        Route="ClearanceStatusPage"
+            />
+        
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <StackLayout Padding="20">
+            <Button Text="Logout" Command="{Binding LogoutCommand}"/>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+
+   
+
+</Shell>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentClearanceApp.Views.Dashboard.StudentAffairsPage"
+             xmlns:viewModel ="clr-namespace:StudentClearanceApp.ViewModels.Dashboard"
+             x:DataType="viewModel:StudentAffairsViewModel"
+             Title="{Binding Title}">
+
+
+
+
+
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10" Orientation="Vertical" HorizontalOptions="Center">
+
+            <Frame Padding="10" HasShadow="True" HeightRequest="80" BorderColor="CadetBlue">
+                <VerticalStackLayout>
+                    <Label  Text="Full Name" FontSize="20" Padding="0,0,5,0" HorizontalOptions="CenterAndExpand"/>
+                    <Entry Placeholder="Enter Fullname" Text="{Binding Name, Mode=TwoWay}" FontSize="18"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="10" HasShadow="True" HeightRequest="80" BorderColor="CadetBlue">
+                <VerticalStackLayout>
+                    <Label  Text="Matric No" FontSize="20" Padding="0,0,5,0" HorizontalOptions="CenterAndExpand"/>
+                    <Entry Placeholder="Enter Matric No" Text="{Binding Matricno,Mode=TwoWay}" FontSize="18"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="10" HasShadow="True" HeightRequest="80" BorderColor="CadetBlue">
+                <VerticalStackLayout>
+                    <Label  Text="Department" FontSize="20" Padding="0,0,5,0" HorizontalOptions="CenterAndExpand"/>
+                    <Entry Placeholder="Enter Department" Text="{Binding Dept, Mode=TwoWay}" FontSize="18"/>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Padding="10" HasShadow="True" HeightRequest="80" BorderColor="CadetBlue">
+                <VerticalStackLayout>
+                    <Label  Text="Clearance Receipt Number" FontSize="20" Padding="0,0,5,0" HorizontalOptions="CenterAndExpand"/>
+                    <Entry  Placeholder="Clearance Receipt Number" Text="{Binding Receipt, Mode=TwoWay}" FontSize="18"/>
+
+                </VerticalStackLayout>
+            </Frame>
+
+
+
+            <Frame Padding="10" HasShadow="True" HeightRequest="70" >
+                <VerticalStackLayout>
+                    <Button  BackgroundColor="CadetBlue" Text="Submit Clearance" Command="{Binding SubmitdataCommand}"/>
+
+                </VerticalStackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

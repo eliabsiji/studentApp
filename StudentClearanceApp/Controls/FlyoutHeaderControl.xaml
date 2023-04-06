@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<VerticalStackLayout xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.PresentationMode="ModalAnimated"
+             x:Class="StudentClearanceApp.Controls.FlyoutHeaderControl">
+
+
+    <Grid 
+              ColumnDefinitions="*"
+              ColumnSpacing="5"
+              RowDefinitions="140,*,*"
+              RowSpacing="5"
+              HeightRequest="200" 
+              BackgroundColor="DarkSlateBlue">
+
+        <Frame CornerRadius="10" 
+                   HeightRequest="120" 
+                   WidthRequest="120">
+            <Image Source="profile.jpg" HeightRequest="120" WidthRequest="120"  />
+        </Frame>
+
+
+        <Label      x:Name="lblUserName"
+                   
+                    Grid.Row="1"
+                    FontSize="20"
+                    Margin="0,0,0,0"
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center"/>
+        
+        <Label      x:Name="lblUserEmail"
+                   
+                    Grid.Row="2"
+                    FontSize="20"
+                    Margin="0,0,0,0"
+                    TextColor="White" 
+                    HorizontalTextAlignment="Center"/>
+    </Grid>
+</VerticalStackLayout>
+
+

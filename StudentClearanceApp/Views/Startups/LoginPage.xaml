@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             Shell.PresentationMode="ModalAnimated"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewModel ="clr-namespace:StudentClearanceApp.ViewModels.Startups"
+             x:DataType="viewModel:LoginPageViewModel"
+             x:Class="StudentClearanceApp.Views.Startups.LoginPage">
+
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="35"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image Source="logo1.png" 
+                   HeightRequest="230" 
+                   WidthRequest="230" />
+
+            <VerticalStackLayout Spacing="10" Margin="0,0,0,0">
+                <Label Text="Welcome" 
+                       FontSize="28" 
+                       TextColor="Gray" 
+                       HorizontalTextAlignment="Center" />
+
+                <Label Text="(An Online School Clearance App)" 
+                       FontSize="18" TextColor="Gray" 
+                       HorizontalTextAlignment="Center" />
+
+            </VerticalStackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Frame ZIndex="1"  
+                       HasShadow="True" 
+                       BorderColor="Blue" 
+                       HeightRequest="56" 
+                       WidthRequest="56" 
+                       CornerRadius="28">
+
+                    <Image Source="user1.png" 
+                           HeightRequest="20" 
+                           WidthRequest="20"/>
+                </Frame>
+
+                <Frame  HeightRequest="45"  
+                        Margin="-20,0,0,0" 
+                        Padding="0" 
+                        HasShadow="True" 
+                        BorderColor="Blue" 
+                        BackgroundColor="GhostWhite" 
+                        HorizontalOptions="FillAndExpand">
+
+                    <Entry  Text="{Binding Email}"
+                            Margin="20,0,0,0" 
+                            VerticalOptions="Center"  
+                            Placeholder="Username" 
+                            />
+
+                </Frame>
+
+                <Label Text="" 
+                       x:Name="lblloginError"
+                       FontSize="18" 
+                       TextColor="Gray" 
+                       HorizontalTextAlignment="Center" />
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame ZIndex="1" 
+                       HasShadow="True" 
+                       BorderColor="blue" 
+                       HeightRequest="56" 
+                       WidthRequest="56" 
+                       CornerRadius="28">
+
+                    <Image Source="user1.png" 
+                           HeightRequest="20" 
+                           WidthRequest="20"/>
+                </Frame>
+
+                <Frame  HeightRequest="45"  
+                        Margin="-20,0,0,0" 
+                        Padding="0" 
+                        HasShadow="True" 
+                        BorderColor="blue" 
+                        BackgroundColor="GhostWhite" 
+                        HorizontalOptions="FillAndExpand">
+
+                    <Entry  Text="{Binding Password}"
+                            Margin="20,0,10,0" 
+                            VerticalOptions="Center" 
+                            IsPassword="True" 
+                            Placeholder="Password" 
+                             />
+                </Frame>
+
+
+
+            </StackLayout>
+
+            <Button Text="Sign In"  
+                    WidthRequest="150" 
+                    CornerRadius="20" 
+                    HorizontalOptions="Center" 
+                    BackgroundColor="Blue"
+                    Command="{Binding LoginCommand}"/>
+
+            <StackLayout Orientation="Horizontal" 
+                         Margin="1" 
+                         HorizontalOptions="Center">
+
+                <Label Text="Forgot Password?" TextColor="Gray" />
+
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" Margin="3">
+
+              
+                <Label Text="Dont  have account?   Sign Up">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding RegisterCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

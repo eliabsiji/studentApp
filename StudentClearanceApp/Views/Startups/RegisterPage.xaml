@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StudentClearanceApp.Views.Startups.RegisterPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewModel ="clr-namespace:StudentClearanceApp.ViewModels.Startups"
+             x:DataType="viewModel:RegisterPageViewModel"
+             Title="{Binding Title}">
+
+
+    <ScrollView>
+
+        <VerticalStackLayout Margin="20,20,20,0" Spacing="10">
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="First Name" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Firstname, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="firstnameVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Last Name" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Lastname, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="lastnameVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Other Name" FontSize="15" WidthRequest="90" Margin="0,20"/>
+                    <Entry  Text="{Binding Othername, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="othernameVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+            
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Phone" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Phone, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="phoneVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Matric No" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Matricno, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="matricVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+
+
+
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Email" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Email, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="emailVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Marital Status" FontSize="15" WidthRequest="100" Margin="0,20"/>
+                    <Entry  Text="{Binding Maritalstatus, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="maritalstatusVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="School" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding School, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="schoolVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Gender" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Gender, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="genderVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="State" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding State, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="stateVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+            
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Department" FontSize="15" WidthRequest="100" Margin="0,20"/>
+                    <Entry  Text="{Binding Dept, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="deptVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Religion" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Religion, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="religionVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Level" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Level, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="levelVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Year" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Year, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="yearVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Session" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Session, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="sessionVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Qualification" FontSize="15" WidthRequest="90" Margin="0,20"/>
+                    <Entry  Text="{Binding Qualification, Mode=TwoWay}"  WidthRequest="230" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="qualificationVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Label Text="AUTHENTICATION DETAILS" TextColor="Blue" FontSize="Header" Margin="10" HorizontalOptions="CenterAndExpand"></Label>
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Username" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Username, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="usernameVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Password" FontSize="15" WidthRequest="80" Margin="0,20"/>
+                    <Entry  Text="{Binding Password, Mode=TwoWay}"  WidthRequest="250" HeightRequest="40" FontSize="15" IsPassword="True"  PlaceholderColor="DimGrey"    Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="passwordVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+
+
+            <Frame   Margin="0,0,0,0" Padding="10,2,10,2" HeightRequest="60" HasShadow="True"  >
+                <HorizontalStackLayout>
+                    <Label Text="Re-Password" FontSize="15" WidthRequest="100" Margin="0,20"/>
+                    <Entry   WidthRequest="250" HeightRequest="40" FontSize="15" PlaceholderColor="DimGrey"  IsPassword="True"  Margin="20,0,0,0">
+                        <Entry.Behaviors>
+                            <toolkit:TextValidationBehavior 
+                                x:Name="repasswordVal"
+                                Flags="ValidateOnAttaching,ValidateOnValueChanged"
+                                MinimumLength="1"/>
+                        </Entry.Behaviors>
+                    </Entry>
+
+                </HorizontalStackLayout>
+            </Frame>
+
+
+
+            <Frame Padding="10,2,10,2"  BorderColor="White">
+                <HorizontalStackLayout>
+                    <Button Text="Submit Registration" 
+                            Margin="100,0,40,0" 
+                            Command="{Binding SubmitRegistrationCommand}" />
+                </HorizontalStackLayout>
+            </Frame>
+
+           
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
